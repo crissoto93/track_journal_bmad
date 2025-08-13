@@ -1,0 +1,8 @@
+module.exports = {
+  FIREBASE_API_KEY: 'test',
+  FIREBASE_APP_ID: 'test',
+  FIREBASE_PROJECT_ID: 'test',
+  FIREBASE_MESSAGING_SENDER_ID: 'test',
+  FIREBASE_STORAGE_BUCKET: 'test',
+  FIREBASE_AUTH_DOMAIN: 'test',
+};
