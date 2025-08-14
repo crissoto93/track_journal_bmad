@@ -95,3 +95,24 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+## Firebase configuration
+
+- Create a `.env` file based on `.env.example` and set:
+  - `FIREBASE_API_KEY`, `FIREBASE_APP_ID`, `FIREBASE_PROJECT_ID`, `FIREBASE_MESSAGING_SENDER_ID`, `FIREBASE_STORAGE_BUCKET`, `FIREBASE_AUTH_DOMAIN`.
+- Optional: enable local emulators by setting `FIREBASE_USE_EMULATORS=true` in `.env`.
+
+### Local Emulator Suite
+
+- Start emulators:
+```sh
+npm run emulators:start
+```
+- Clean and start fresh:
+```sh
+npm run emulators:start:clean
+```
+- Run emulator tests (requires emulators running):
+```sh
+npm run test:emu
+```
