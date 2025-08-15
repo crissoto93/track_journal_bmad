@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { ActivityIndicator, Text } from 'react-native-paper';
+import { ActivityIndicator, Text, Button } from 'react-native-paper';
 import { getFirebase } from '../services/firebase';
+import { signOut } from 'firebase/auth';
 
 export default function DashboardScreen(): JSX.Element {
   const [status, setStatus] = useState<'checking' | 'connected' | 'not-configured' | 'error'>('checking');
@@ -22,6 +23,17 @@ export default function DashboardScreen(): JSX.Element {
     };
   }, []);
 
+  const handleLogout = async () => {
+    try {
+      const firebase = await getFirebase();
+      if (firebase) {
+        await signOut(firebase.auth);
+      }
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text variant="titleLarge">Dashboard</Text>
@@ -31,6 +43,14 @@ export default function DashboardScreen(): JSX.Element {
       ) : (
         <Text style={styles.spacer}>Firebase status: {status}</Text>
       )}
+      
+      <Button
+        mode="outlined"
+        onPress={handleLogout}
+        style={styles.logoutButton}
+      >
+        Logout
+      </Button>
     </View>
   );
 }
@@ -43,5 +63,8 @@ const styles = StyleSheet.create({
   },
   spacer: {
     marginTop: 8,
+  },
+  logoutButton: {
+    marginTop: 16,
   },
 });
