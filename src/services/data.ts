@@ -4,6 +4,7 @@ import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 export interface UserProfile {
   id: string;
   email: string;
+  displayName?: string;
   createdAt: any; // Firestore timestamp
 }
 
@@ -15,7 +16,7 @@ export interface CreateUserProfileResult {
   };
 }
 
-export async function createUserProfile(uid: string, email: string): Promise<CreateUserProfileResult> {
+export async function createUserProfile(uid: string, email: string, displayName?: string): Promise<CreateUserProfileResult> {
   try {
     const firebase = await getFirebase();
     if (!firebase) {
@@ -31,6 +32,7 @@ export async function createUserProfile(uid: string, email: string): Promise<Cre
     const userProfile: UserProfile = {
       id: uid,
       email,
+      ...(displayName && { displayName }),
       createdAt: serverTimestamp()
     };
 

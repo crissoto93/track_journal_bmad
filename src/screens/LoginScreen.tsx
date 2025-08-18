@@ -13,8 +13,7 @@ import {
   Snackbar,
   Surface,
 } from 'react-native-paper';
-import { signUp } from '../services/auth';
-import { createUserProfile } from '../services/data';
+import { signIn } from '../services/auth';
 import { useNavigation } from '@react-navigation/native';
 import SocialAuthButtons from '../components/SocialAuthButtons';
 
@@ -23,11 +22,10 @@ interface ValidationErrors {
   password?: string;
 }
 
-export default function SignUpScreen(): React.JSX.Element {
+export default function LoginScreen(): React.JSX.Element {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<ValidationErrors>({});
   const [snackbarVisible, setSnackbarVisible] = useState(false);
@@ -46,17 +44,13 @@ export default function SignUpScreen(): React.JSX.Element {
     // Password validation
     if (!password) {
       newErrors.password = 'Password is required';
-    } else if (password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
-    } else if (password !== confirmPassword) {
-      newErrors.password = 'Passwords do not match';
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSignUp = async () => {
+  const handleLogin = async () => {
     if (!validateForm()) {
       return;
     }
@@ -65,35 +59,18 @@ export default function SignUpScreen(): React.JSX.Element {
     setErrors({});
 
     try {
-      // Step 1: Create user in Firebase Auth
-      const signUpResult = await signUp(email, password);
+      const loginResult = await signIn(email, password);
       
-      if (!signUpResult.success || !signUpResult.user) {
-        setSnackbarMessage(signUpResult.error?.message || 'Sign up failed');
+      if (!loginResult.success || !loginResult.user) {
+        setSnackbarMessage(loginResult.error?.message || 'Login failed');
         setSnackbarVisible(true);
         return;
       }
 
-      // Step 2: Create user profile in Firestore
-      const profileResult = await createUserProfile(
-        signUpResult.user.uid,
-        signUpResult.user.email || email
-      );
-
-      if (!profileResult.success) {
-        setSnackbarMessage(profileResult.error?.message || 'Failed to create user profile');
-        setSnackbarVisible(true);
-        return;
-      }
-
-      // Step 3: Navigate to Dashboard on success
-      setSnackbarMessage('Account created successfully!');
+      // Login successful - navigation will be handled by RootNavigator auth state
+      setSnackbarMessage('Login successful!');
       setSnackbarVisible(true);
-      
-      // Navigate to Dashboard after a brief delay
-      setTimeout(() => {
-        navigation.navigate('Dashboard' as never);
-      }, 1500);
+
     } catch (error) {
       setSnackbarMessage('An unexpected error occurred');
       setSnackbarVisible(true);
@@ -102,14 +79,17 @@ export default function SignUpScreen(): React.JSX.Element {
     }
   };
 
+  const handleForgotPassword = () => {
+    navigation.navigate('ForgotPassword' as never);
+  };
+
+  const handleSignUp = () => {
+    navigation.navigate('SignUp' as never);
+  };
+
   const handleSocialAuthSuccess = (_user: { uid: string; email: string | null; displayName?: string | null }) => {
-    setSnackbarMessage('Account created successfully!');
+    setSnackbarMessage('Login successful!');
     setSnackbarVisible(true);
-    
-    // Navigate to Dashboard after a brief delay
-    setTimeout(() => {
-      navigation.navigate('Dashboard' as never);
-    }, 1500);
   };
 
   const handleSocialAuthError = (error: { code: string; message: string }) => {
@@ -117,7 +97,7 @@ export default function SignUpScreen(): React.JSX.Element {
     setSnackbarVisible(true);
   };
 
-  const isFormValid = email.trim() && password.length >= 6 && password === confirmPassword;
+  const isFormValid = email.trim() && password.length > 0;
 
   return (
     <KeyboardAvoidingView
@@ -127,7 +107,7 @@ export default function SignUpScreen(): React.JSX.Element {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <Surface style={styles.surface}>
           <Text variant="headlineMedium" style={styles.title}>
-            Create Account
+            Welcome Back
           </Text>
           
           <TextInput
@@ -158,33 +138,32 @@ export default function SignUpScreen(): React.JSX.Element {
             {errors.password}
           </HelperText>
 
-          <TextInput
-            label="Confirm Password"
-            value={confirmPassword}
-            onChangeText={setConfirmPassword}
-            mode="outlined"
-            secureTextEntry
-            style={styles.input}
-            error={!!errors.password}
-          />
-
           <Button
             mode="contained"
-            onPress={handleSignUp}
+            onPress={handleLogin}
             loading={loading}
             disabled={!isFormValid || loading}
             style={styles.button}
           >
-            Sign Up
+            Log In
+          </Button>
+
+          <Button
+            mode="text"
+            onPress={handleForgotPassword}
+            disabled={loading}
+            style={styles.forgotButton}
+          >
+            Forgot Password?
           </Button>
 
                      <Button
              mode="text"
-             onPress={() => navigation.goBack()}
+             onPress={handleSignUp}
              disabled={loading}
-             style={styles.backButton}
+             style={styles.signUpButton}
            >
-             Back to Login
+             Don't have an account? Sign Up
            </Button>
 
            <SocialAuthButtons
@@ -233,7 +212,10 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginBottom: 8,
   },
-  backButton: {
+  forgotButton: {
     marginTop: 8,
+  },
+  signUpButton: {
+    marginTop: 16,
   },
 });

@@ -1,4 +1,4 @@
-import { firebaseEnv, hasFirebaseConfig, useEmulators } from '../config/env';
+import { firebaseEnv, hasFirebaseConfig, shouldUseEmulators } from '../config/env';
 
 export type FirebaseServices = {
   app: any;
@@ -13,7 +13,6 @@ export async function getFirebase(): Promise<FirebaseServices> {
 
   if (!hasFirebaseConfig()) {
     if (typeof __DEV__ !== 'undefined' && __DEV__) {
-      // eslint-disable-next-line no-console
       console.warn('Firebase env not set; skipping initialization');
     }
     return null;
@@ -39,12 +38,11 @@ export async function getFirebase(): Promise<FirebaseServices> {
   const auth = getAuth(app);
   const db = getFirestore(app);
 
-  if (useEmulators()) {
+  if (shouldUseEmulators()) {
     try {
       connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true });
       connectFirestoreEmulator(db as any, '127.0.0.1', 8080);
     } catch (e) {
-      // eslint-disable-next-line no-console
       console.warn('Failed to connect to Firebase emulators. Are they running?', e);
     }
   }

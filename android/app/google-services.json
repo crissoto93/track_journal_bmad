@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "240839547185",
+    "project_id": "track-journal-53715",
+    "storage_bucket": "track-journal-53715.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240839547185:android:d05a2f8b2f2d917f223810",
+        "android_client_info": {
+          "package_name": "com.trackjournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240839547185-mbhr8q49lsrbbl1alpkbee01parklkm6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trackjournal",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "240839547185-ks6rdb5ldpe4mvm1icu51v9vt98kbv3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsbHXdLxgs8GOx7Or0n-k7p63OMJVzy8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240839547185-ks6rdb5ldpe4mvm1icu51v9vt98kbv3k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "240839547185-qs4su29i7mq1p7lu14hr9oejhaetv11i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.trackjournal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

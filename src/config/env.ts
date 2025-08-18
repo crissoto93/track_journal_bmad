@@ -30,9 +30,10 @@ export const firebaseEnv: FirebaseEnv = {
 export const hasFirebaseConfig = (): boolean =>
   Boolean(FIREBASE_API_KEY && FIREBASE_APP_ID && FIREBASE_PROJECT_ID);
 
-export const useEmulators = (): boolean => {
+export const shouldUseEmulators = (): boolean => {
   // Allow either flag to enable emulator wiring in dev/test
   if (typeof JEST_USE_EMULATORS !== 'undefined' && JEST_USE_EMULATORS === 'true') return true;
   if (typeof FIREBASE_USE_EMULATORS !== 'undefined' && FIREBASE_USE_EMULATORS === 'true') return true;
   return false;
 };
+

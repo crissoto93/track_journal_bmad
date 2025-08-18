@@ -5,7 +5,7 @@ import { onAuthStateChanged, User } from 'firebase/auth';
 import { AuthNavigator } from './AuthNavigator';
 import { AppNavigator } from './AppNavigator';
 
-export function RootNavigator(): JSX.Element {
+export function RootNavigator(): React.JSX.Element {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -14,8 +14,8 @@ export function RootNavigator(): JSX.Element {
       try {
         const firebase = await getFirebase();
         if (firebase) {
-          const unsubscribe = onAuthStateChanged(firebase.auth, (user) => {
-            setUser(user);
+          const unsubscribe = onAuthStateChanged(firebase.auth, (authUser) => {
+            setUser(authUser);
             setLoading(false);
           });
           return unsubscribe;

@@ -1,22 +1,35 @@
-import React from 'react';
-import { StatusBar, useColorScheme } from 'react-native';
+import React, { useEffect } from 'react';
+import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Provider as PaperProvider } from 'react-native-paper';
 import { NavigationContainer, DarkTheme as NavDarkTheme, DefaultTheme as NavDefaultTheme } from '@react-navigation/native';
-import { paperDarkTheme, paperLightTheme } from './src/theme/paperTheme';
+import { ThemeProvider, useTheme } from './src/theme';
 import { RootNavigator } from './src/navigation/RootNavigator';
+import { initializeGoogleSignIn } from './src/services/socialAuth';
 
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+function AppContent(): React.JSX.Element {
+  const { isDark } = useTheme();
+
+  useEffect(() => {
+    // Initialize Google Sign-In
+    initializeGoogleSignIn();
+  }, []);
 
   return (
+    <>
+      <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} />
+      <NavigationContainer theme={isDark ? NavDarkTheme : NavDefaultTheme}>
+        <RootNavigator />
+      </NavigationContainer>
+    </>
+  );
+}
+
+function App(): React.JSX.Element {
+  return (
     <SafeAreaProvider>
-      <PaperProvider theme={isDarkMode ? paperDarkTheme : paperLightTheme}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <NavigationContainer theme={isDarkMode ? NavDarkTheme : NavDefaultTheme}>
-          <RootNavigator />
-        </NavigationContainer>
-      </PaperProvider>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
     </SafeAreaProvider>
   );
 }
