@@ -1,0 +1,140 @@
+{
+  "timestamp": "2025-08-19T01:04:50.235Z",
+  "summary": {
+    "totalTests": 16,
+    "passedTests": 10,
+    "failedTests": 6,
+    "skippedTests": 0,
+    "successRate": "62.50",
+    "executionTime": 13692
+  },
+  "categories": {
+    "unit": {
+      "count": 16,
+      "passed": 10,
+      "failed": 6
+    },
+    "integration": {
+      "count": 0,
+      "passed": 0,
+      "failed": 0
+    },
+    "e2e": {
+      "count": 0,
+      "passed": 0,
+      "failed": 0
+    }
+  },
+  "performance": {
+    "slowestTests": [
+      {
+        "name": "VehicleForm Create Mode should render create form with correct title",
+        "duration": 1659,
+        "status": "failed"
+      },
+      {
+        "name": "VehicleForm Create Mode should load models when make is selected",
+        "duration": 1270,
+        "status": "failed"
+      },
+      {
+        "name": "VehicleForm Create Mode should successfully create vehicle",
+        "duration": 1238,
+        "status": "failed"
+      },
+      {
+        "name": "VehicleForm Edit Mode should show error when vehicle data is missing",
+        "duration": 1237,
+        "status": "failed"
+      },
+      {
+        "name": "VehicleForm Create Mode should handle create vehicle error",
+        "duration": 1210,
+        "status": "failed"
+      },
+      {
+        "name": "VehicleForm Edit Mode should successfully update vehicle",
+        "duration": 499,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Validation should validate year range",
+        "duration": 421,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Edit Mode should handle update vehicle error",
+        "duration": 399,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Create Mode should load vehicle makes on mount",
+        "duration": 344,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Edit Mode should pre-populate form with vehicle data",
+        "duration": 341,
+        "status": "passed"
+      }
+    ],
+    "fastestTests": [
+      {
+        "name": "VehicleForm Create Mode should show confirmation dialog on cancel",
+        "duration": 201,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Error Handling should handle makes loading error",
+        "duration": 240,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Create Mode should validate required fields",
+        "duration": 249,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Error Handling should handle models loading error",
+        "duration": 277,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Validation should validate VIN length",
+        "duration": 298,
+        "status": "failed"
+      },
+      {
+        "name": "VehicleForm Edit Mode should render edit form with correct title",
+        "duration": 339,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Edit Mode should pre-populate form with vehicle data",
+        "duration": 341,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Create Mode should load vehicle makes on mount",
+        "duration": 344,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Edit Mode should handle update vehicle error",
+        "duration": 399,
+        "status": "passed"
+      },
+      {
+        "name": "VehicleForm Validation should validate year range",
+        "duration": 421,
+        "status": "passed"
+      }
+    ],
+    "averageTestTime": 586.35
+  },
+  "recommendations": [
+    "⚠️  Test success rate is below 80%. Review failed tests and improve test stability.",
+    "🔧 Investigate and fix failing tests to maintain code quality.",
+    "🔗 Consider adding integration tests for better system validation."
+  ]
+}

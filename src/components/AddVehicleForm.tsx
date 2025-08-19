@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, ScrollView, Alert } from 'react-native';
-import { Text, TextInput, Button, SegmentedButtons, HelperText } from 'react-native-paper';
+import { Text, TextInput, Button, HelperText } from 'react-native-paper';
 import { useTheme } from '../theme';
 import { 
   CreateVehicleData, 
   VehicleType, 
-  VEHICLE_TYPES, 
   TRANSMISSION_TYPES,
   VehicleValidationErrors 
 } from '../types/vehicle';
@@ -120,9 +119,7 @@ export function AddVehicleForm({
       newErrors.year = 'Year must be between 1900 and next year';
     }
 
-    if (!formData.type) {
-      newErrors.type = 'Vehicle type is required';
-    }
+
 
     if (formData.vin && formData.vin.length < 17) {
       newErrors.vin = 'VIN must be 17 characters';
@@ -205,26 +202,7 @@ export function AddVehicleForm({
       </View>
 
       <View style={styles.form}>
-        {/* Vehicle Type */}
-        <View style={styles.section}>
-          <Text variant="titleSmall" style={[styles.sectionTitle, { color: theme.colors.onSurface }]}>
-            Vehicle Type
-          </Text>
-          <SegmentedButtons
-            value={formData.type}
-            onValueChange={(value) => updateFormData('type', value as VehicleType)}
-            buttons={VEHICLE_TYPES.map(type => ({
-              value: type.value,
-              label: type.label,
-            }))}
-            style={styles.segmentedButtons}
-          />
-          {errors.type && (
-            <HelperText type="error" visible={!!errors.type}>
-              {errors.type}
-            </HelperText>
-          )}
-        </View>
+
 
         {/* Make and Model */}
         <View style={styles.section}>
@@ -417,9 +395,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     fontWeight: '600',
   },
-  segmentedButtons: {
-    marginBottom: 8,
-  },
+
   input: {
     marginBottom: 8,
   },

@@ -27,7 +27,9 @@ export function VehicleCard({
   const vehicleIcon = vehicleType ? VEHICLE_ICONS[vehicleType.icon as keyof typeof VEHICLE_ICONS] : VEHICLE_ICONS.car;
 
   const handlePress = () => {
-    if (onPress) {
+    if (onEdit) {
+      onEdit(vehicle);
+    } else if (onPress) {
       onPress(vehicle);
     }
   };

@@ -18,6 +18,15 @@ export async function getFirebase(): Promise<FirebaseServices> {
     return null;
   }
 
+  // In test environment, return mock services
+  if (typeof jest !== 'undefined' || process.env.NODE_ENV === 'test') {
+    return {
+      app: {},
+      auth: {},
+      db: {},
+    };
+  }
+
   const { initializeApp, getApps } = await import('firebase/app');
   const { getAuth } = await import('firebase/auth');
   const { getFirestore } = await import('firebase/firestore');

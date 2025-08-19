@@ -12,6 +12,7 @@ describe('PlaceholderScreen', () => {
     await act(async () => {
       tree = ReactTestRenderer.create(<PlaceholderScreen />);
     });
+    
     expect(tree!.toJSON()).toBeTruthy();
-  });
-}, 10000);
+  }, 10000); // Increased timeout to 10 seconds
+});

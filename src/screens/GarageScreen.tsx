@@ -11,11 +11,15 @@ import EmptyState from '../components/EmptyState';
 import LoadingState from '../components/LoadingState';
 import ErrorState from '../components/ErrorState';
 import VehicleCard from '../components/VehicleCard';
-import AddVehicleForm from '../components/AddVehicleForm';
+import VehicleForm from '../components/VehicleForm';
 import { VEHICLE_ICONS } from '../components/IconConstants';
 import Icon from '../components/Icon';
 
-export default function GarageScreen(): React.JSX.Element {
+interface GarageScreenProps {
+  navigation: any;
+}
+
+export default function GarageScreen({ navigation }: GarageScreenProps): React.JSX.Element {
   const { theme } = useTheme();
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
@@ -84,8 +88,8 @@ export default function GarageScreen(): React.JSX.Element {
   };
 
   const handleEditVehicle = (vehicle: Vehicle) => {
-    // TODO: Implement edit vehicle functionality
-    console.log('Edit vehicle:', vehicle.id);
+    // Navigate to edit vehicle screen
+    navigation.navigate('EditVehicle', { vehicleId: vehicle.id });
   };
 
   const handleDeleteVehicle = (vehicle: Vehicle) => {
@@ -114,16 +118,14 @@ export default function GarageScreen(): React.JSX.Element {
     );
   };
 
-  const handleVehiclePress = (vehicle: Vehicle) => {
-    // TODO: Navigate to vehicle details or edit screen
-    console.log('Vehicle pressed:', vehicle.id);
-  };
+
 
   // Show add vehicle form
   if (showAddForm && userId) {
     return (
-      <AddVehicleForm
+      <VehicleForm
         userId={userId}
+        mode="create"
         onSuccess={handleVehicleAdded}
         onCancel={handleCancelAdd}
       />
@@ -175,7 +177,6 @@ export default function GarageScreen(): React.JSX.Element {
                 <VehicleCard
                   key={vehicle.id}
                   vehicle={vehicle}
-                  onPress={handleVehiclePress}
                   onEdit={handleEditVehicle}
                   onDelete={handleDeleteVehicle}
                 />
@@ -193,58 +194,7 @@ export default function GarageScreen(): React.JSX.Element {
           )}
         </Card>
 
-        {/* Vehicle Types Info */}
-        <Card>
-          <Text variant="titleMedium" style={[styles.cardTitle, { color: theme.colors.onSurface }]}>
-            Supported Vehicle Types
-          </Text>
-          <View style={styles.vehicleTypes}>
-            <View style={styles.vehicleType}>
-              <Icon
-                name={VEHICLE_ICONS.car.name}
-                family={VEHICLE_ICONS.car.family}
-                size="lg"
-                color={theme.colors.primary}
-              />
-              <Text variant="bodyMedium" style={[styles.vehicleTypeText, { color: theme.colors.onSurface }]}>
-                Cars
-              </Text>
-            </View>
-            <View style={styles.vehicleType}>
-              <Icon
-                name={VEHICLE_ICONS.motorcycle.name}
-                family={VEHICLE_ICONS.motorcycle.family}
-                size="lg"
-                color={theme.colors.primary}
-              />
-              <Text variant="bodyMedium" style={[styles.vehicleTypeText, { color: theme.colors.onSurface }]}>
-                Motorcycles
-              </Text>
-            </View>
-            <View style={styles.vehicleType}>
-              <Icon
-                name={VEHICLE_ICONS.truck.name}
-                family={VEHICLE_ICONS.truck.family}
-                size="lg"
-                color={theme.colors.primary}
-              />
-              <Text variant="bodyMedium" style={[styles.vehicleTypeText, { color: theme.colors.onSurface }]}>
-                Trucks
-              </Text>
-            </View>
-            <View style={styles.vehicleType}>
-              <Icon
-                name={VEHICLE_ICONS.bike.name}
-                family={VEHICLE_ICONS.bike.family}
-                size="lg"
-                color={theme.colors.primary}
-              />
-              <Text variant="bodyMedium" style={[styles.vehicleTypeText, { color: theme.colors.onSurface }]}>
-                Bikes
-              </Text>
-            </View>
-          </View>
-        </Card>
+
 
         {/* Features Info */}
         <Card>
@@ -342,21 +292,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     fontWeight: '600',
   },
-  vehicleTypes: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    flexWrap: 'wrap',
-    gap: 16,
-  },
-  vehicleType: {
-    alignItems: 'center',
-    gap: 8,
-    minWidth: 80,
-  },
-  vehicleTypeText: {
-    textAlign: 'center',
-    fontWeight: '500',
-  },
+
   features: {
     gap: 16,
   },

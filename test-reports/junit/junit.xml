@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="16" failures="6" errors="0" time="13.685">
+  <testsuite name="VehicleForm" errors="0" failures="6" skipped="0" timestamp="2025-08-19T01:04:36" time="13.203" tests="16">
+    <testcase classname="VehicleForm › Create Mode" name="should render create form with correct title" time="1.659">
+      <failure>Error: Found multiple elements with text: Add Vehicle
+    at Object.&lt;anonymous&gt; (C:\Users\cds9\track_journal\__tests__\components\VehicleForm.test.tsx:78:20)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+    at _next (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7)
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+    at Promise.then.completed (C:\Users\cds9\track_journal\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\cds9\track_journal\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\cds9\track_journal\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\cds9\track_journal\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\cds9\track_journal\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\cds9\track_journal\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\cds9\track_journal\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\cds9\track_journal\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\cds9\track_journal\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    </testcase>
+    <testcase classname="VehicleForm › Create Mode" name="should load vehicle makes on mount" time="0.344">
+    </testcase>
+    <testcase classname="VehicleForm › Create Mode" name="should load models when make is selected" time="1.27">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+Expected: &quot;1&quot;
+
+Number of calls: 0
+    at Object.&lt;anonymous&gt; (C:\Users\cds9\track_journal\__tests__\components\VehicleForm.test.tsx:104:20)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)</failure>
+    </testcase>
+    <testcase classname="VehicleForm › Create Mode" name="should validate required fields" time="0.249">
+    </testcase>
+    <testcase classname="VehicleForm › Create Mode" name="should successfully create vehicle" time="1.238">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalled()
+
+Expected number of calls: &gt;= 1
+Received number of calls:    0
+    at Object.&lt;anonymous&gt; (C:\Users\cds9\track_journal\__tests__\components\VehicleForm.test.tsx:145:20)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)</failure>
+    </testcase>
+    <testcase classname="VehicleForm › Create Mode" name="should handle create vehicle error" time="1.21">
+      <failure>Error: Unable to find an element with text: Failed to create vehicle
+
+&lt;RCTScrollView&gt;
+  &lt;View&gt;
+    &lt;View&gt;
+      &lt;Text&gt;
+        Add Vehicle
+      &lt;/Text&gt;
+      &lt;Text&gt;
+        Enter your vehicle details to start tracking sessions
+      &lt;/Text&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Make &amp; Model
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;Text&gt;
+            Make
+          &lt;/Text&gt;
+          &lt;View
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+          &gt;
+            &lt;View&gt;
+              &lt;Text&gt;
+                Select vehicle make
+              &lt;/Text&gt;
+              &lt;View&gt;
+                &lt;Icon /&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;Text&gt;
+            Make is required
+          &lt;/Text&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;Text&gt;
+            Model
+          &lt;/Text&gt;
+          &lt;View
+            accessibilityState={
+              {
+                &quot;disabled&quot;: true,
+              }
+            }
+            accessible={true}
+          &gt;
+            &lt;View&gt;
+              &lt;Text&gt;
+                Select vehicle model
+              &lt;/Text&gt;
+              &lt;View&gt;
+                &lt;Icon /&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;Text&gt;
+            Model is required
+          &lt;/Text&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Basic Information
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+                style={
+                  {
+                    &quot;opacity&quot;: 0,
+                  }
+                }
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Year
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Year
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;2025&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Color
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Color
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Technical Details
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Engine
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Engine
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              placeholder=&quot;e.g., 2.0L Turbo, V8, etc.&quot;
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;Text&gt;
+            Transmission
+          &lt;/Text&gt;
+          &lt;View
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+          &gt;
+            &lt;View&gt;
+              &lt;Text&gt;
+                Select transmission type
+              &lt;/Text&gt;
+              &lt;View&gt;
+                &lt;Icon /&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Registration
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    License Plate
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    License Plate
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    VIN (Vehicle Identification Number)
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    VIN (Vehicle Identification Number)
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Additional Information
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Notes
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Notes
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              placeholder=&quot;Any additional notes about your vehicle...&quot;
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View
+        testID=&quot;cancel-button-container-outer-layer&quot;
+      &gt;
+        &lt;View
+          testID=&quot;cancel-button-container&quot;
+        &gt;
+          &lt;View
+            accessibilityRole=&quot;button&quot;
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+            testID=&quot;cancel-button&quot;
+          &gt;
+            &lt;View&gt;
+              &lt;Text
+                testID=&quot;cancel-button-text&quot;
+              &gt;
+                Cancel
+              &lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View
+        testID=&quot;submit-button-container-outer-layer&quot;
+      &gt;
+        &lt;View
+          testID=&quot;submit-button-container&quot;
+        &gt;
+          &lt;View
+            accessibilityRole=&quot;button&quot;
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+            testID=&quot;submit-button&quot;
+          &gt;
+            &lt;View&gt;
+              &lt;Text
+                testID=&quot;submit-button-text&quot;
+              &gt;
+                Add Vehicle
+              &lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  &lt;/View&gt;
+&lt;/RCTScrollView&gt;
+    at Object.&lt;anonymous&gt; (C:\Users\cds9\track_journal\__tests__\components\VehicleForm.test.tsx:174:20)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)</failure>
+    </testcase>
+    <testcase classname="VehicleForm › Create Mode" name="should show confirmation dialog on cancel" time="0.201">
+    </testcase>
+    <testcase classname="VehicleForm › Edit Mode" name="should render edit form with correct title" time="0.339">
+    </testcase>
+    <testcase classname="VehicleForm › Edit Mode" name="should pre-populate form with vehicle data" time="0.341">
+    </testcase>
+    <testcase classname="VehicleForm › Edit Mode" name="should successfully update vehicle" time="0.499">
+    </testcase>
+    <testcase classname="VehicleForm › Edit Mode" name="should handle update vehicle error" time="0.399">
+    </testcase>
+    <testcase classname="VehicleForm › Edit Mode" name="should show error when vehicle data is missing" time="1.237">
+      <failure>Error: Unable to find an element with text: Vehicle data is required for editing
+
+&lt;RCTScrollView&gt;
+  &lt;View&gt;
+    &lt;View&gt;
+      &lt;Text&gt;
+        Edit Vehicle
+      &lt;/Text&gt;
+      &lt;Text&gt;
+        Update your vehicle information
+      &lt;/Text&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Make &amp; Model
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;Text&gt;
+            Make
+          &lt;/Text&gt;
+          &lt;View
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+          &gt;
+            &lt;View&gt;
+              &lt;Text&gt;
+                Select vehicle make
+              &lt;/Text&gt;
+              &lt;View&gt;
+                &lt;Icon /&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;Text&gt;
+            Make is required
+          &lt;/Text&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;Text&gt;
+            Model
+          &lt;/Text&gt;
+          &lt;View
+            accessibilityState={
+              {
+                &quot;disabled&quot;: true,
+              }
+            }
+            accessible={true}
+          &gt;
+            &lt;View&gt;
+              &lt;Text&gt;
+                Select vehicle model
+              &lt;/Text&gt;
+              &lt;View&gt;
+                &lt;Icon /&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;Text&gt;
+            Model is required
+          &lt;/Text&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Basic Information
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+                style={
+                  {
+                    &quot;opacity&quot;: 0,
+                  }
+                }
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Year
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Year
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;2025&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Color
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Color
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Technical Details
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Engine
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Engine
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              placeholder=&quot;e.g., 2.0L Turbo, V8, etc.&quot;
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;Text&gt;
+            Transmission
+          &lt;/Text&gt;
+          &lt;View
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+          &gt;
+            &lt;View&gt;
+              &lt;Text&gt;
+                Select transmission type
+              &lt;/Text&gt;
+              &lt;View&gt;
+                &lt;Icon /&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Registration
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    License Plate
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    License Plate
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    VIN (Vehicle Identification Number)
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    VIN (Vehicle Identification Number)
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Additional Information
+        &lt;/Text&gt;
+        &lt;View&gt;
+          &lt;View
+            pointerEvents=&quot;none&quot;
+            testID=&quot;text-input-outline&quot;
+          /&gt;
+          &lt;View&gt;
+            &lt;View
+              pointerEvents=&quot;none&quot;
+            &gt;
+              &lt;View
+                pointerEvents=&quot;none&quot;
+              &gt;
+                &lt;View&gt;
+                  &lt;Text
+                    testID=&quot;text-input-outlined-label-background&quot;
+                  /&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-active&quot;
+                  &gt;
+                    Notes
+                  &lt;/Text&gt;
+                  &lt;Text
+                    style={
+                      {
+                        &quot;opacity&quot;: 0,
+                      }
+                    }
+                    testID=&quot;text-input-outlined-label-inactive&quot;
+                  &gt;
+                    Notes
+                  &lt;/Text&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;TextInput
+              editable={true}
+              placeholder=&quot;Any additional notes about your vehicle...&quot;
+              testID=&quot;text-input-outlined&quot;
+              value=&quot;&quot;
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View
+        testID=&quot;cancel-button-container-outer-layer&quot;
+      &gt;
+        &lt;View
+          testID=&quot;cancel-button-container&quot;
+        &gt;
+          &lt;View
+            accessibilityRole=&quot;button&quot;
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+            testID=&quot;cancel-button&quot;
+          &gt;
+            &lt;View&gt;
+              &lt;Text
+                testID=&quot;cancel-button-text&quot;
+              &gt;
+                Cancel
+              &lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View
+        testID=&quot;submit-button-container-outer-layer&quot;
+      &gt;
+        &lt;View
+          testID=&quot;submit-button-container&quot;
+        &gt;
+          &lt;View
+            accessibilityRole=&quot;button&quot;
+            accessibilityState={
+              {
+                &quot;disabled&quot;: false,
+              }
+            }
+            accessible={true}
+            testID=&quot;submit-button&quot;
+          &gt;
+            &lt;View&gt;
+              &lt;Text
+                testID=&quot;submit-button-text&quot;
+              &gt;
+                Save Changes
+              &lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  &lt;/View&gt;
+&lt;/RCTScrollView&gt;
+    at Object.&lt;anonymous&gt; (C:\Users\cds9\track_journal\__tests__\components\VehicleForm.test.tsx:285:20)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)</failure>
+    </testcase>
+    <testcase classname="VehicleForm › Validation" name="should validate year range" time="0.421">
+    </testcase>
+    <testcase classname="VehicleForm › Validation" name="should validate VIN length" time="0.298">
+      <failure>Error: Found multiple elements with display value:  
+    at Object.getByDisplayValue (C:\Users\cds9\track_journal\__tests__\components\VehicleForm.test.tsx:333:31)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at asyncGeneratorStep (C:\Users\cds9\track_journal\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)</failure>
+    </testcase>
+    <testcase classname="VehicleForm › Error Handling" name="should handle makes loading error" time="0.24">
+    </testcase>
+    <testcase classname="VehicleForm › Error Handling" name="should handle models loading error" time="0.277">
+    </testcase>
+  </testsuite>
+</testsuites>

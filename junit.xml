@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="103" failures="0" errors="0" time="26.7">
+  <testsuite name="Validation Utils" errors="0" failures="0" skipped="0" timestamp="2025-08-18T03:16:01" time="5.108" tests="38">
+    <testcase classname="Validation Utils validateVehicle should pass validation for valid vehicle data" name="Validation Utils validateVehicle should pass validation for valid vehicle data" time="0.051">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for missing make" name="Validation Utils validateVehicle should fail validation for missing make" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for missing model" name="Validation Utils validateVehicle should fail validation for missing model" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for missing year" name="Validation Utils validateVehicle should fail validation for missing year" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for invalid year (too old)" name="Validation Utils validateVehicle should fail validation for invalid year (too old)" time="0.004">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for invalid year (too new)" name="Validation Utils validateVehicle should fail validation for invalid year (too new)" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for missing type" name="Validation Utils validateVehicle should fail validation for missing type" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for invalid type" name="Validation Utils validateVehicle should fail validation for invalid type" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should pass validation for all valid vehicle types" name="Validation Utils validateVehicle should pass validation for all valid vehicle types" time="0.008">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for make that is too long" name="Validation Utils validateVehicle should fail validation for make that is too long" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for model that is too long" name="Validation Utils validateVehicle should fail validation for model that is too long" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for engine that is too long" name="Validation Utils validateVehicle should fail validation for engine that is too long" time="0">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for transmission that is too long" name="Validation Utils validateVehicle should fail validation for transmission that is too long" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for color that is too long" name="Validation Utils validateVehicle should fail validation for color that is too long" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for VIN that is too long" name="Validation Utils validateVehicle should fail validation for VIN that is too long" time="0">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for license plate that is too long" name="Validation Utils validateVehicle should fail validation for license plate that is too long" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should fail validation for notes that is too long" name="Validation Utils validateVehicle should fail validation for notes that is too long" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should pass validation for vehicle with only required fields" name="Validation Utils validateVehicle should pass validation for vehicle with only required fields" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should handle whitespace in string fields" name="Validation Utils validateVehicle should handle whitespace in string fields" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateVehicle should handle special characters in fields" name="Validation Utils validateVehicle should handle special characters in fields" time="0.003">
+    </testcase>
+    <testcase classname="Validation Utils validateEmail should pass validation for valid email addresses" name="Validation Utils validateEmail should pass validation for valid email addresses" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validateEmail should fail validation for missing email" name="Validation Utils validateEmail should fail validation for missing email" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateEmail should fail validation for email with only whitespace" name="Validation Utils validateEmail should fail validation for email with only whitespace" time="0.003">
+    </testcase>
+    <testcase classname="Validation Utils validateEmail should fail validation for invalid email format" name="Validation Utils validateEmail should fail validation for invalid email format" time="0.004">
+    </testcase>
+    <testcase classname="Validation Utils validateEmail should fail validation for email that is too long" name="Validation Utils validateEmail should fail validation for email that is too long" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateEmail should handle special characters in email" name="Validation Utils validateEmail should handle special characters in email" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validateEmail should handle email with multiple dots" name="Validation Utils validateEmail should handle email with multiple dots" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validatePassword should pass validation for valid passwords" name="Validation Utils validatePassword should pass validation for valid passwords" time="0.002">
+    </testcase>
+    <testcase classname="Validation Utils validatePassword should fail validation for missing password" name="Validation Utils validatePassword should fail validation for missing password" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validatePassword should fail validation for password that is too short" name="Validation Utils validatePassword should fail validation for password that is too short" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validatePassword should fail validation for password that is too long" name="Validation Utils validatePassword should fail validation for password that is too long" time="0">
+    </testcase>
+    <testcase classname="Validation Utils validatePassword should handle special characters in password" name="Validation Utils validatePassword should handle special characters in password" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validatePassword should handle password with exactly minimum length" name="Validation Utils validatePassword should handle password with exactly minimum length" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils validatePassword should handle password with exactly maximum length" name="Validation Utils validatePassword should handle password with exactly maximum length" time="0">
+    </testcase>
+    <testcase classname="Validation Utils Edge Cases should handle null and undefined values gracefully" name="Validation Utils Edge Cases should handle null and undefined values gracefully" time="0.003">
+    </testcase>
+    <testcase classname="Validation Utils Edge Cases should handle very large numbers for year validation" name="Validation Utils Edge Cases should handle very large numbers for year validation" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils Edge Cases should handle negative numbers for year validation" name="Validation Utils Edge Cases should handle negative numbers for year validation" time="0.001">
+    </testcase>
+    <testcase classname="Validation Utils Edge Cases should handle floating point numbers for year validation" name="Validation Utils Edge Cases should handle floating point numbers for year validation" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Auth Service" errors="0" failures="0" skipped="0" timestamp="2025-08-18T03:16:01" time="5.579" tests="6">
+    <testcase classname="Auth Service signIn should successfully sign in a user" name="Auth Service signIn should successfully sign in a user" time="0.034">
+    </testcase>
+    <testcase classname="Auth Service signIn should handle authentication error" name="Auth Service signIn should handle authentication error" time="0.002">
+    </testcase>
+    <testcase classname="Auth Service signUp should successfully create a new user" name="Auth Service signUp should successfully create a new user" time="0.004">
+    </testcase>
+    <testcase classname="Auth Service signUp should handle email already in use error" name="Auth Service signUp should handle email already in use error" time="0.004">
+    </testcase>
+    <testcase classname="Auth Service sendPasswordResetEmail should successfully send password reset email" name="Auth Service sendPasswordResetEmail should successfully send password reset email" time="0.003">
+    </testcase>
+    <testcase classname="Auth Service sendPasswordResetEmail should handle user not found error" name="Auth Service sendPasswordResetEmail should handle user not found error" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="firebase emulator integration" errors="0" failures="0" skipped="1" timestamp="2025-08-18T03:16:07" time="1.571" tests="1">
+    <testcase classname="firebase emulator integration initializes without throwing and returns services" name="firebase emulator integration initializes without throwing and returns services" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="Vehicles Service" errors="0" failures="0" skipped="0" timestamp="2025-08-18T03:16:07" time="1.88" tests="6">
+    <testcase classname="Vehicles Service getVehicleMakes should return sample vehicle makes" name="Vehicles Service getVehicleMakes should return sample vehicle makes" time="0.013">
+    </testcase>
+    <testcase classname="Vehicles Service getVehicleModels should return models for a specific make" name="Vehicles Service getVehicleModels should return models for a specific make" time="0.002">
+    </testcase>
+    <testcase classname="Vehicles Service getVehicleModels should return empty array for non-existent make" name="Vehicles Service getVehicleModels should return empty array for non-existent make" time="0.002">
+    </testcase>
+    <testcase classname="Vehicles Service Vehicle makes and models data should contain valid vehicle makes and models" name="Vehicles Service Vehicle makes and models data should contain valid vehicle makes and models" time="0.062">
+    </testcase>
+    <testcase classname="Vehicles Service Vehicle makes and models data should have unique make IDs" name="Vehicles Service Vehicle makes and models data should have unique make IDs" time="0.001">
+    </testcase>
+    <testcase classname="Vehicles Service Vehicle makes and models data should have unique model IDs across all makes" name="Vehicles Service Vehicle makes and models data should have unique model IDs across all makes" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ErrorState" errors="0" failures="0" skipped="0" timestamp="2025-08-18T03:16:01" time="12.416" tests="26">
+    <testcase classname="ErrorState Rendering should render with default props" name="ErrorState Rendering should render with default props" time="0.221">
+    </testcase>
+    <testcase classname="ErrorState Rendering should render with custom title and message" name="ErrorState Rendering should render with custom title and message" time="0.018">
+    </testcase>
+    <testcase classname="ErrorState Rendering should render with custom retry text" name="ErrorState Rendering should render with custom retry text" time="0.098">
+    </testcase>
+    <testcase classname="ErrorState Rendering should show retry button when onRetry is provided and showRetry is true" name="ErrorState Rendering should show retry button when onRetry is provided and showRetry is true" time="0.032">
+    </testcase>
+    <testcase classname="ErrorState Rendering should not show retry button when onRetry is not provided" name="ErrorState Rendering should not show retry button when onRetry is not provided" time="0.007">
+    </testcase>
+    <testcase classname="ErrorState Rendering should not show retry button when showRetry is false" name="ErrorState Rendering should not show retry button when showRetry is false" time="0.006">
+    </testcase>
+    <testcase classname="ErrorState Rendering should not show retry button when both onRetry and showRetry are false" name="ErrorState Rendering should not show retry button when both onRetry and showRetry are false" time="0.008">
+    </testcase>
+    <testcase classname="ErrorState Interactions should call onRetry when retry button is pressed" name="ErrorState Interactions should call onRetry when retry button is pressed" time="0.028">
+    </testcase>
+    <testcase classname="ErrorState Interactions should not crash when retry button is pressed multiple times" name="ErrorState Interactions should not crash when retry button is pressed multiple times" time="0.04">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle empty title" name="ErrorState Edge Cases should handle empty title" time="0.008">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle empty message" name="ErrorState Edge Cases should handle empty message" time="0.005">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle empty retry text" name="ErrorState Edge Cases should handle empty retry text" time="0.02">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle very long title" name="ErrorState Edge Cases should handle very long title" time="0.008">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle very long message" name="ErrorState Edge Cases should handle very long message" time="0.004">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle very long retry text" name="ErrorState Edge Cases should handle very long retry text" time="0.02">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle special characters in title" name="ErrorState Edge Cases should handle special characters in title" time="0.011">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle special characters in message" name="ErrorState Edge Cases should handle special characters in message" time="0.004">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle special characters in retry text" name="ErrorState Edge Cases should handle special characters in retry text" time="0.029">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle HTML-like content in title" name="ErrorState Edge Cases should handle HTML-like content in title" time="0.003">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle HTML-like content in message" name="ErrorState Edge Cases should handle HTML-like content in message" time="0.009">
+    </testcase>
+    <testcase classname="ErrorState Edge Cases should handle undefined values gracefully" name="ErrorState Edge Cases should handle undefined values gracefully" time="0.006">
+    </testcase>
+    <testcase classname="ErrorState Accessibility should have proper accessibility labels" name="ErrorState Accessibility should have proper accessibility labels" time="0.005">
+    </testcase>
+    <testcase classname="ErrorState Accessibility should be pressable when onRetry is provided" name="ErrorState Accessibility should be pressable when onRetry is provided" time="0.031">
+    </testcase>
+    <testcase classname="ErrorState Theme Integration should use theme colors correctly" name="ErrorState Theme Integration should use theme colors correctly" time="0.008">
+    </testcase>
+    <testcase classname="ErrorState Layout and Styling should render with proper container structure" name="ErrorState Layout and Styling should render with proper container structure" time="0.008">
+    </testcase>
+    <testcase classname="ErrorState Layout and Styling should handle different screen sizes gracefully" name="ErrorState Layout and Styling should handle different screen sizes gracefully" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="VehicleCard" errors="0" failures="0" skipped="0" timestamp="2025-08-18T03:16:02" time="12.795" tests="24">
+    <testcase classname="VehicleCard Rendering should render vehicle information correctly" name="VehicleCard Rendering should render vehicle information correctly" time="0.326">
+    </testcase>
+    <testcase classname="VehicleCard Rendering should render with minimal vehicle data" name="VehicleCard Rendering should render with minimal vehicle data" time="0.024">
+    </testcase>
+    <testcase classname="VehicleCard Rendering should render different vehicle types correctly" name="VehicleCard Rendering should render different vehicle types correctly" time="0.039">
+    </testcase>
+    <testcase classname="VehicleCard Rendering should render with actions when showActions is true" name="VehicleCard Rendering should render with actions when showActions is true" time="0.057">
+    </testcase>
+    <testcase classname="VehicleCard Rendering should not render actions when showActions is false" name="VehicleCard Rendering should not render actions when showActions is false" time="0.049">
+    </testcase>
+    <testcase classname="VehicleCard Rendering should not render edit button when onEdit is not provided" name="VehicleCard Rendering should not render edit button when onEdit is not provided" time="0.059">
+    </testcase>
+    <testcase classname="VehicleCard Rendering should not render delete button when onDelete is not provided" name="VehicleCard Rendering should not render delete button when onDelete is not provided" time="0.055">
+    </testcase>
+    <testcase classname="VehicleCard Interactions should call onPress when card is pressed" name="VehicleCard Interactions should call onPress when card is pressed" time="0.045">
+    </testcase>
+    <testcase classname="VehicleCard Interactions should call onEdit when edit button is pressed" name="VehicleCard Interactions should call onEdit when edit button is pressed" time="0.058">
+    </testcase>
+    <testcase classname="VehicleCard Interactions should call onDelete when delete button is pressed" name="VehicleCard Interactions should call onDelete when delete button is pressed" time="0.033">
+    </testcase>
+    <testcase classname="VehicleCard Interactions should not crash when onPress is not provided" name="VehicleCard Interactions should not crash when onPress is not provided" time="0.038">
+    </testcase>
+    <testcase classname="VehicleCard Interactions should not crash when onEdit is not provided" name="VehicleCard Interactions should not crash when onEdit is not provided" time="0.044">
+    </testcase>
+    <testcase classname="VehicleCard Interactions should not crash when onDelete is not provided" name="VehicleCard Interactions should not crash when onDelete is not provided" time="0.039">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with very long make and model names" name="VehicleCard Edge Cases should handle vehicle with very long make and model names" time="0.033">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with special characters in names" name="VehicleCard Edge Cases should handle vehicle with special characters in names" time="0.023">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with missing optional fields" name="VehicleCard Edge Cases should handle vehicle with missing optional fields" time="0.027">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with all optional fields populated" name="VehicleCard Edge Cases should handle vehicle with all optional fields populated" time="0.036">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with zero year" name="VehicleCard Edge Cases should handle vehicle with zero year" time="0.028">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with very old year" name="VehicleCard Edge Cases should handle vehicle with very old year" time="0.022">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with future year" name="VehicleCard Edge Cases should handle vehicle with future year" time="0.032">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with empty string values" name="VehicleCard Edge Cases should handle vehicle with empty string values" time="0.021">
+    </testcase>
+    <testcase classname="VehicleCard Edge Cases should handle vehicle with null values" name="VehicleCard Edge Cases should handle vehicle with null values" time="0.026">
+    </testcase>
+    <testcase classname="VehicleCard Accessibility should have proper accessibility labels" name="VehicleCard Accessibility should have proper accessibility labels" time="0.032">
+    </testcase>
+    <testcase classname="VehicleCard Accessibility should be pressable when onPress is provided" name="VehicleCard Accessibility should be pressable when onPress is provided" time="0.035">
+    </testcase>
+  </testsuite>
+  <testsuite name="PlaceholderScreen" errors="0" failures="0" skipped="0" timestamp="2025-08-18T03:16:01" time="16.134" tests="1">
+    <testcase classname="PlaceholderScreen renders without hanging" name="PlaceholderScreen renders without hanging" time="6.221">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-18T03:16:02" time="24.142" tests="1">
+    <testcase classname=" renders correctly" name=" renders correctly" time="0.044">
+    </testcase>
+  </testsuite>
+</testsuites>
